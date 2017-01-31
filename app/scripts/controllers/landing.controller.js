@@ -11,6 +11,7 @@
           $timeout(function(){
             $state.go('reference');
           },1000)
+          console.log(555);
         }
     })
 })();

@@ -1,34 +1,19 @@
 'use strict';
 (function() {
   angular.module('c360App')
-    .controller('ReferenceController', function($timeout) {
+    .controller('ReferenceController', function($timeout, TILES) {
       var vm = this;
       vm.opacity = 0;
-      vm.expansions = ['basic', 'exp1', 'exp2', 'exp3'];
+      vm.expansions = [{name:'basic'},{name:'exp1'},{name:'exp2'},{name:'exp3'}];
+      vm.activeFilters = [];
+      vm.tiles = TILES; 
+
       $timeout(function() {
         vm.opacity = 1
       }, 100)
 
 
-    }).directive('draggable', function() {
-      return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            $(element).draggable();
-        }
-      }
     })
-    .directive('droppable', function() {
-      return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            $(element).droppable({
-              drop:function(event, ui) {
-                console.log(ui);
-              },
-              hoverClass: "drop-hover"
-            });
-        }
-      }
-    });
+
+
 })();

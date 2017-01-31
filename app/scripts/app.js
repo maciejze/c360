@@ -12,10 +12,11 @@ angular
   .module('c360App', [
     'ngRoute',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'ngAnimate'
   ]).config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/landing");
+    $urlRouterProvider.otherwise('/landing');
     $stateProvider.state({
       name: 'landing',
       url: '/landing',

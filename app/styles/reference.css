@@ -3,37 +3,76 @@
   height: 100vh;
   background-color: brown;
   transition: opacity 1s;
-  padding-top: 50px;
+  font-family: 'Pacifico', cursive;
 }
-.reference-container{
-  width:80%;
+
+.reference-container {
+  width: 80%;
   margin: 0 auto;
+  padding-top: 100px;
 }
+
 .reference .controls {
   color: black;
 }
 
-.reference .controls .drag .draggable-elements {
-}
-.drag{
-  width:60%;
-  display:inline-block;
+.reference .controls .drag .draggable-elements {}
+
+.drag {
+  width: 60%;
+  display: inline-block;
   vertical-align: top;
 }
-.drop-zone{
-  width:39%;
-  height:200px;
-  border:5px solid white;
-  border-radius: 10px;
-  display:inline-block;
+.drag>h3{
+  margin:10px 20px;
+  color:white;
+  font-size: 30px;
+  letter-spacing: 2px;
 }
+.drop-zone {
+  width: 39%;
+  height: 200px;
+  border: 5px solid white;
+  border-radius: 10px;
+  display: inline-block;
+}
+
 .draggable-elements>.element {
   display: inline-block;
   width: 100px;
   height: 100px;
   background-color: white;
+  margin: 5px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.drop-hover {
+  border-style: dashed;
+}
+
+.tile{
+  display: inline-block;
   margin:5px;
 }
-.drop-hover{
-  border-style: dashed;
+.animate-enter {
+	-webkit-transition: 2s linear all; /* Chrome */
+	transition: 2s linear all;
+	opacity: 0;
+
+}
+
+.animate-enter.animate-enter-active {
+	opacity: 1;
+}
+.tiles-container .tile-wrapper{
+  width:100px;
+  height:50px;
+  color:black;
+  background-color: white;
+
 }

@@ -2,20 +2,28 @@
   <div class="reference-container">
     <div class="controls">
       <div class="drag">
+        <h3>Drag me into box!</h3>
         <div class="draggable-elements">
-          <div ng-repeat="element in reference.expansions" draggable class="element element{{$index}}">
-            {{element}}
+          <div ng-repeat="element in reference.expansions " draggable class="element" element-name="{{element.name}}">
+            <h5>{{element.name}}</h5>
           </div>
-
 
         </div>
       </div>
-      <div class="drop-zone" droppable>
+      <div class="drop-zone" droppable filters="reference.activeFilters" expansions="reference.expansions">
 
       </div>
+
     </div>
     <div class="tiles-container">
-
+      <div class="tile-wrapper" ng-repeat="filter in reference.activeFilters" >
+        <div >
+            {{filter.name}}
+        </div>
+      </div>
+      <div class="tile" ng-repeat="tile in reference.tiles" >
+          <img ng-src="images/tiles/{{tile.imageUrl}}"/>
+      </div>
     </div>
   </div>
 
