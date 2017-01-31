@@ -1,0 +1,22 @@
+<div class="reference" ng-style="{'opacity' : reference.opacity}">
+  <div class="reference-container">
+    <div class="controls">
+      <div class="drag">
+        <div class="draggable-elements">
+          <div ng-repeat="element in reference.expansions" draggable class="element element{{$index}}">
+            {{element}}
+          </div>
+
+
+        </div>
+      </div>
+      <div class="drop-zone" droppable>
+
+      </div>
+    </div>
+    <div class="tiles-container">
+
+    </div>
+  </div>
+
+</div>

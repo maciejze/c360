@@ -1,0 +1,39 @@
+.reference {
+  width: 100vw;
+  height: 100vh;
+  background-color: brown;
+  transition: opacity 1s;
+  padding-top: 50px;
+}
+.reference-container{
+  width:80%;
+  margin: 0 auto;
+}
+.reference .controls {
+  color: black;
+}
+
+.reference .controls .drag .draggable-elements {
+}
+.drag{
+  width:60%;
+  display:inline-block;
+  vertical-align: top;
+}
+.drop-zone{
+  width:39%;
+  height:200px;
+  border:5px solid white;
+  border-radius: 10px;
+  display:inline-block;
+}
+.draggable-elements>.element {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  margin:5px;
+}
+.drop-hover{
+  border-style: dashed;
+}
